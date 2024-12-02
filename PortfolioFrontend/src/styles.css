@@ -1,0 +1,163 @@
+/* Light mode (default) */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #1F1E1E;
+    --text-color2:#7C7C7C;
+    --primary-color: #007bff;
+    --icon-color: #1F1E1E;
+    /* Usando rgba para color con opacidad */
+    --bg-nav-color: #DDDDDD;; /* #DDDDDD con opacidad 0.5 */
+    --hover-color: #D16D4A;
+}
+
+/* Dark mode */
+[data-theme='dark'] {
+    --bg-color: #1F1E1E;
+    --text-color: #ffffff;
+    --text-color2:#8D8D8D;
+
+    --primary-color: #bb86fc;
+    --icon-color: #DDDDDD;
+    /* Usando rgba para color con opacidad */
+    --bg-nav-color: rgba(38, 38, 38, 0.5); /* #262626 con opacidad 0.5 */
+    --hover-color: #D16D4A;
+
+}
+  svg{
+    fill: var(--icon-color);
+    height: 50px;
+    width: 50px;
+  }
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+  }
+  
+  button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+
+  @font-face {
+    font-family: 'SF Mono';
+    src: url('/assets/fonts/SFMonoRegular.otf') format('truetype'),
+         url('/assets/fonts/SF-Mono-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('/assets/fonts/Montserrat-SemiBold.ttf') format('truetype'),
+         url('/assets/fonts/SF-Mono-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Calibre';
+    src: url('/assets/fonts/TestCalibre-Light-BF661746edb619a.otf') format('truetype'),
+         url('/assets/fonts/SF-Mono-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  span{
+    font-family: 'SF Mono', monospace;
+    color: var(--hover-color);
+    transition: color 0.3s ease;
+  }
+
+a,button {
+    font-family: 'SF Mono', monospace;
+
+}
+button{
+  background-color: transparent;
+  border: 1px solid var(--hover-color);
+  border-radius: 8px;
+  color: var(--hover-color);
+}
+button:hover{
+  background-color: var(--hover-color);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+h1,h2{
+  font-family: 'Montserrat', sans-serif;
+}
+p{
+  font-family: 'Calibre', sans-serif;
+}
+
+.snap-container {
+  margin-top: 90px; /* Ajusta esto a la altura del nav */
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: calc(100vh - 60px); /* Resta la altura del nav para que encaje bien */
+  scroll-behavior:smooth;
+  /* Ocultar la barra de scroll */
+  scrollbar-width: none; /* Firefox */
+}
+.snap-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Edge */
+}
+
+/* Cada sección debe ser un punto de "snap" */
+.snap-section {
+  scroll-snap-align: start; /* Alinea el borde superior de cada sección */
+  height: 100vh; /* Ocupa toda la ventana */
+  display: flex; /* Opcional: para centrar contenido */
+  justify-content: center;
+  align-items: center;
+}
+
+app-nav {
+  position: fixed; /* Fija el nav en la pantalla */
+  top: 0;          /* Posiciónalo en la parte superior */
+  left: 0;         /* Alinea a la izquierda */
+  width: 100%;     /* Ocupa todo el ancho */
+  z-index: 10;     /* Asegúrate de que esté sobre los demás elementos */
+
+}
+app-projects{
+  width: 90%;
+}
+.arrow-indicator {
+  position: absolute;
+  bottom: 20px; /* Ajusta la posición vertical */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem; /* Tamaño de la flecha */
+  color: #555; /* Color de la flecha */
+  cursor: pointer;
+  animation: bounce 1.5s infinite; /* Animación para que se mueva */
+  z-index: 5; /* Asegúrate de que esté encima de otros elementos */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translate(-50%, 0);
+  }
+  40% {
+    transform: translate(-50%, -10px); /* Rebote hacia arriba */
+  }
+  60% {
+    transform: translate(-50%, -5px); /* Rebote más leve */
+  }
+}
+@media (max-width: 768px) {
+  app-nav {
+    position: relative; /* Cambiar posición si no es crítico que sea fixed */
+  }
+
+  .snap-container {
+    margin-top: 0; /* Evita el espacio superior extra */
+    height: auto; /* Deja que el contenido fluya */
+  }
+
+  .snap-section {
+    height: auto; /* Adapta la altura según el contenido */
+    min-height: 70vh; /* Reduce la altura mínima en móviles */
+  }
+}
