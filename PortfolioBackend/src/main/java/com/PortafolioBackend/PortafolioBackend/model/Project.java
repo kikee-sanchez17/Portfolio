@@ -1,10 +1,12 @@
-package com.PortafolioBackend.PortafolioBackend.Model;
+package com.PortafolioBackend.PortafolioBackend.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.List;
 
 @Document
 @Data
@@ -21,10 +23,24 @@ public class Project {
 
     private String description;
 
-    private String[] technologies;
+    private List<Technology> technologies; // Array de objetos Technology
 
     private String imageURL;
 
     private String repositoryURL;
 
+    private String docURL;
+
+    private String videoURL;
+
+    public String getDescription() {
+        return description;
+    }
+    public void setDescription(String description){
+        this.description=description;
+
+    }
+
 }
+
+

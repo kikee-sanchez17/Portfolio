@@ -12,6 +12,7 @@
 }
 
 .projects{
+    margin-top: 2%;
     display:grid;
     color: black;
     row-gap: 4vw;
@@ -19,10 +20,14 @@
     grid-template-columns: repeat(auto-fit, minmax(350px, 0.4fr));
     grid-auto-rows: 250px; /* Define la altura dinámica de cada fila */
     justify-content: center;
+    
 }
 .project {
+
     background-color: var(--bg-nav-color);
     padding:25px;
+
+    
 }
 .project .info p{
     color: var(--text-color);
@@ -30,9 +35,16 @@
     font-size: 0.9rem;
 
 }
+
+.project .info{
+    height: 50%;
+}
 .project .technologies {
     display: flex;
     justify-content:flex-end;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
 }
 .project .technologies .name{
     padding-top: 10px;

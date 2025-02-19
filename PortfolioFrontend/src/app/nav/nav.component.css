@@ -1,15 +1,24 @@
 body{
     box-sizing: border-box;
+   
+
 }
 .parent {
     display: flex; /* Activa Flexbox para organizar en una fila */
     align-items: center; /* Alinear verticalmente los elementos hijos */
     justify-content: flex-end; /* Todo alineado hacia la derecha */
-    padding: 40px 70px 10px 10px;
+    padding: 40px 70px 15px 10px;
     gap: 20px; /* Espaciado entre los ítems del contenedor */
     flex-wrap: wrap; /* Permite que los elementos se muevan a otra línea */
+    background-color: var(--bg-color);
+
 
 }
+.parent.scrolled {
+    background-color: var(--bg-color-scrolled); /* Fondo semitransparente */
+    backdrop-filter: blur(10px); /* Efecto blur */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega sombra para destacar */
+  }
 
 /* Estilo del menú */
 .menu {
@@ -18,6 +27,7 @@ body{
     margin: 0;
     display: flex; /* Alinear los ítems horizontalmente */
     gap: 40px; /* Espaciado entre los ítems del menú */
+    
 }
 
 /* Elementos del menú */
@@ -41,6 +51,7 @@ body{
     height: 2px;
     background-color: var(--hover-color); /* Color de la línea */
     transition: width 0.3s ease; /* Transición suave para la línea */
+    
 }
 
 /* Efecto de hover */
@@ -75,46 +86,3 @@ body{
     margin-right: 20px;
 }
 
-/* Dispositivos pequeños (móviles, menos de 600px) */
-@media (max-width: 600px) {
-    .parent {
-        flex-direction: column; /* Elementos en columna */
-        align-items: center; /* Alinear al inicio horizontal */
-        padding: 20px; /* Ajustar el padding para móviles */
-    }
-
-    .menu {
-        flex-direction: column; /* Menú vertical */
-        gap: 20px; /* Reducir espaciado */
-        text-align: left; /* Alinear texto a la izquierda */
-    }
-
-    .menu-item {
-        font-size: 1.5em; /* Tamaño más pequeño */
-    }
-
-    .togglebutton {
-        justify-content: center; /* Centrar los botones en móvil */
-    }
-
-    .images {
-        margin-left: 0; /* Quitar márgenes para simplificar diseño */
-        justify-content: center; /* Centrar imágenes */
-        gap: 15px; /* Reducir espacio entre imágenes */
-    }
-}
-
-/* Dispositivos medianos (tabletas, menos de 900px) */
-@media (max-width: 900px) {
-    .menu {
-        gap: 30px; /* Reducir el espacio entre elementos del menú */
-    }
-
-    .menu-item {
-        font-size: 1.7em; /* Tamaño intermedio */
-    }
-
-    .images {
-        gap: 20px; /* Ajustar espacio entre imágenes */
-    }
-}
