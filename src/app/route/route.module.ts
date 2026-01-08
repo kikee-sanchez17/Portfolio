@@ -11,7 +11,7 @@ export const routes: Routes = [
     { path: 'about-me', component: AboutMeComponent },
     { path: 'projects', component: ProjectsComponent },
     { path: 'contact', component: ContactComponent },
-    { path: 'project/:rno', component: ProjectDetailComponent } // Detalle de un proyecto
+    { path: 'project/:_id', component: ProjectDetailComponent } // Detalle de un proyecto
   ];
   export default routes;
 

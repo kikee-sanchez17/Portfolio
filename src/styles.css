@@ -1,26 +1,9 @@
 /* Light mode (default) */
 :root {
-    --bg-color: #ffffff;
-    --bg-color-scrolled:rgba(255, 255, 255, 0.5);
-    --text-color: #1F1E1E;
-    --text-color2:#7C7C7C;
-    --primary-color: #007bff;
-    --icon-color: #1F1E1E;
-    /* Usando rgba para color con opacidad */
-    --bg-nav-color: #DDDDDD;; /* #DDDDDD con opacidad 0.5 */
-    --hover-color: #D16D4A;
-    --footer-bg-color: #F5F5F5; /* Gris claro */
-    --footer-text-color: #1F1E1E; /* Texto oscuro */
-    --form-bg-home: url('assets/images/1-Photoroom.png');
-}
-
-/* Dark mode */
-[data-theme='dark'] {
     --bg-color: #1F1E1E;
     --bg-color-scrolled: rgba(31, 30, 30, 0.6); /* Opacidad del 50% */
     --text-color: #ffffff;
     --text-color2:#8D8D8D;
-
     --primary-color: #bb86fc;
     --icon-color: #DDDDDD;
     /* Usando rgba para color con opacidad */
@@ -29,8 +12,8 @@
     --footer-bg-color: #121212; /* Negro suave */
     --footer-text-color: #ffffff; /* Texto blanco */
     --form-bg-home: url('assets/images/2-Photoroom.png');
-
 }
+
   svg{
     fill: var(--icon-color);
     height: 50px;

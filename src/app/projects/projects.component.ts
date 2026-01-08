@@ -19,9 +19,13 @@ export class ProjectsComponent {
   constructor(private projectService: ProjectService) { }
 
   ngOnInit(): void {
-    this.getProjects();
+   // this.getProjects();
+    this.projectService.getProjects().subscribe(data => {
+      this.projects = data;
+      
+    });
   }
-
+/*
   getProjects(): void {
     this.projectService.getProjects().subscribe(
       (response: Project[]) => {
@@ -32,4 +36,5 @@ export class ProjectsComponent {
       }
     );
   }
+    */
 }

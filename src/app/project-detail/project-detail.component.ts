@@ -24,13 +24,15 @@ export class ProjectDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const rno = this.route.snapshot.paramMap.get('rno');
-    console.log('rno recibido:', rno);
+    const _id = this.route.snapshot.paramMap.get('_id');
+    console.log('rno recibsido:', _id);
+     
 
-    if (rno) {
-      this.projectService.getProject(Number(rno)).subscribe(
+    if (_id) {
+      this.projectService.getProject(Number(_id)).subscribe(
         (data) => {
           this.project = data;
+          console.log('Proyecto obtenido:', data.project_title);
           this.isTherevideoURL= this.project.videoURL == "" ? false : true;
           this.isTheredocURL= this.project.docURL == "" ? false : true;
         },

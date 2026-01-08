@@ -1,0 +1,123 @@
+[{
+  "_id": 4,
+  "project_title": "Portfolio",
+  "short_description": "My personal space to showcase my projects, highlight my full-stack skills, and share a bit about myself.",
+  "description": "Test description4",
+  "technologies": [
+    {
+      "name": "Angular",
+      "info": "I built dynamic single-page applications, using components, services, and reactive forms to manage complex frontend behavior."
+    },
+    {
+      "name": "TypeScript",
+      "info": "I used TypeScript to write more maintainable, strongly typed JavaScript code, improving the reliability and scalability of applications."
+    }
+
+  ],
+  "imageURL": "http://localhost:8081/Images/chill4.png",
+  "_class": "com.PortafolioBackend.PortafolioBackend.Model.Project",
+  "repositoryURL": "https://github.com/kikee-sanchez17",
+  "docURL": "",
+  "videoURL": ""
+},
+{
+  "_id": 3,
+  "project_title": "BuscaMines",
+  "short_description": "An Android game adaptation of the classic Minesweeper, featuring multiple difficulty levels and a leaderboard to compete with other players.",
+  "description": "Test description3",
+  "technologies": [
+    {
+      "name": "Kotlin",
+      "info": "I learned to develop native Android applications, focusing on UI design, data persistence, and asynchronous programming."
+    },
+    {
+      "name": "Firebase",
+      "info": "I used Firebase for real-time databases, user authentication, and cloud-hosted data synchronization in mobile apps."
+    }
+  ],
+  "imageURL": "http://localhost:8081/Images/chill3.png",
+  "_class": "com.PortafolioBackend.PortafolioBackend.Model.Project",
+  "repositoryURL": "https://github.com/kikee-sanchez17/BuscaMinEs",
+  "docURL": "",
+  "videoURL": "https://youtu.be/5hhmqVQTUxI"
+},
+{
+  "_id": 6,
+  "project_title": "MuseMe",
+  "short_description": "A mobile app designed for music lovers, allowing you to browse and purchase your favorite vinyl records.",
+  "description": "Test description6",
+  "technologies": [
+    {
+      "name": "Java",
+      "info": "I developed object-oriented applications, understanding core principles like inheritance, polymorphism, and modular architecture."
+    },
+    {
+      "name": "MySQL",
+      "info": "I designed relational schemas, wrote complex SQL queries, and ensured data integrity with foreign keys and constraints."
+    }
+  ],
+  "imageURL": "http://localhost:8081/Images/chill6.png",
+  "_class": "com.PortafolioBackend.PortafolioBackend.Model.Project",
+  "repositoryURL": "https://github.com/miriammuraaa/MuseMe",
+  "docURL": "https://www.canva.com/design/DAF65h5n3xk/4K73T3FeI24M0djvLEituQ/view?utm_content=DAF65h5n3xk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h37c5bd3d94",
+  "videoURL": ""
+},
+{
+  "_id": 2,
+  "project_title": "Lab-Stock",
+  "short_description": "This Lab-Stock web app streamlines the management of laboratory inventory for my former high school, ensuring efficient tracking and organization of supplies.",
+  "description": "Test description2",
+  "technologies": [
+    {
+      "name": "Laravel",
+      "info": "I learned to create structured, scalable web applications using MVC architecture and integrate relational databases with Eloquent ORM."
+    },
+    {
+      "name": "PHP",
+      "info": "I developed server-side logic, handled form submissions, connected to databases, and implemented user authentication systems."
+    }
+  ],
+  "_class": "com.PortafolioBackend.PortafolioBackend.Model.Project",
+  "imageURL": "http://localhost:8081/Images/chill2.png",
+  "repositoryURL": "https://github.com/kikee-sanchez17/stock-laboratori",
+  "docURL": "",
+  "videoURL": ""
+},
+{
+  "_id": 5,
+  "project_title": "KMusic Bot",
+  "short_description": "This Telegram bot lets you read song lyrics and download your favorite music effortlessly.",
+  "description": "Test description5",
+  "technologies": [
+    {
+      "info": "I created automation scripts and bots, handled APIs, and built basic CLI tools with an emphasis on simplicity and readability.",
+      "name": "Python"
+    }
+  ],
+  "imageURL": "http://localhost:8081/Images/chill5.png",
+  "_class": "com.PortafolioBackend.PortafolioBackend.Model.Project",
+  "repositoryURL": "https://github.com/kikee-sanchez17/Portfolio",
+  "docURL": "",
+  "videoURL": "https://www.youtube.com/watch?v=6myp4rPLd38"
+},
+{
+  "_id": 1,
+  "project_title": "Zumzeig",
+  "short_description": "Zumzeig is an Android app designed for a local cinema in Barcelona, enhancing the movie-going experience with seamless access to schedules and information.",
+  "description": "This application was my final project for my higher degree. My classmate and I wanted to support and promote local cinema, recognizing its cultural significance beyond the dominance of large film industries. To achieve this, we collaborated with a local cinema in Barcelona and developed a fully customized Android application tailored to their needs.\n\nThe app was built using Android Studio with Kotlin as the primary programming language, and it integrates a MySQL relational database to store and manage user information efficiently. One of the main goals was to enhance user engagement by allowing them to create personalized profiles, where they can save their favorite events, delete events, update personal information, and change their passwords.\n\nAdditionally, the app provides essential features for cinema-goers, such as checking movie schedules and exploring the history of the cinema, giving users deeper insight into the venue’s background and its cultural impact.\n\nTo improve security and user experience, I implemented OTP-based password recovery using PHPmailer, ensuring that users can securely reset their passwords if needed. The overall design and functionality of the app were carefully crafted to provide a smooth and intuitive experience, making it easier for the cinema’s audience to stay connected and engaged with their favorite local film screenings.",
+  "technologies": [
+    {
+      "name": "Kotlin",
+      "info": "I learned to develop native Android applications, focusing on UI design, data persistence, and asynchronous programming."
+    },
+    {
+      "name": "Git",
+      "info": "I gained experience with version control, working collaboratively using branches, merges, and managing code history through GitHub."
+    }
+  ],
+  "imageURL": "http://localhost:8081/Images/chill1.png",
+  "_class": "com.PortafolioBackend.PortafolioBackend.Model.Project",
+  "repositoryURL": "https://github.com/kikee-sanchez17/ZumZeig",
+  "docURL": "https://docs.google.com/document/d/1UNc7BvZBrvZEYUI6UR0ENz_8mZdXWzkmHyGvwlXB_wI/edit?usp=drive_link",
+  "videoURL": ""
+}]

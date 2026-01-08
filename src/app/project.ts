@@ -6,7 +6,7 @@ export class Technology {
   
 export interface Project {
 
-    rno : number;
+    _id : number;
     project_title : string;
     short_description : string;
     description : string;
@@ -16,3 +16,4 @@ export interface Project {
     docURL : string;
     videoURL : string;
 }
+
