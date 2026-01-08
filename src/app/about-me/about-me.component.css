@@ -1,0 +1,60 @@
+.title :first-child{
+    color: var(--hover-color);
+    font-family: 'SF Mono', monospace;
+}
+
+.introduction {
+    display: flex;
+    flex-flow: column;
+
+  }
+  
+.introduction p {
+    color: var(--text-color);
+    font-size: 1.5rem;
+  }
+  button {
+    font-size: 1.1rem;
+    width: 15%;
+    height: auto;
+    padding: 1.5% 0;
+
+  }
+  a {
+    text-decoration: none;
+    color: var(--hover-color);
+  }
+          
+ul {
+    display: block;
+    margin-left: -10px;
+  }
+  
+  ul li {
+    display: block;
+    position: relative;
+    font-family: 'Calibre', sans-serif;
+    color: var(--text-color);
+    font-size: 1.2rem;
+  }
+  
+  ul li:not(:last-child) {
+    
+    margin-bottom: 16px;
+  }
+
+  ul li:before {
+    
+    content: "";
+    position: absolute;
+    top: 1.2em;
+    left: -30px;
+    margin-top: -.9em;
+    background: #f69ec4;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #d16d4a, #f9dd94);
+
+  }
+      

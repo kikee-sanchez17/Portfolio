@@ -1,0 +1,86 @@
+/* body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}  */
+
+label {
+    width: 90px; /* Tamaño más pequeño */
+    height: 40px; /* Tamaño más pequeño */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centra los elementos dentro del label */
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: 0.3s;
+    top: -9px;  /* Mueve el botón hacia arriba */
+
+    
+  }
+  /*bola*/
+  label:after {
+    content: "";
+    width: 32px;  /* Reducimos el tamaño del círculo interior */
+    height: 32px; /* Reducimos el tamaño del círculo interior */
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+  
+input{
+    
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+input:checked + label{
+    background:#242424;
+}
+input:checked + label:after{
+    left: 85px;
+    transform:translateX(-100%);
+    background: linear-gradient(180deg,#777,#3a3a3a);
+}
+
+label:active:after{
+    width: 100px;
+}
+
+label svg{
+    position:absolute;
+    width: 20px; /* Tamaño reducido */
+    height: 20px; /* Tamaño reducido */
+    top: 10px;
+    z-index: 100;
+}
+label svg.sun{
+    left:9px;
+    fill: #fff;
+    transition: 0.3s;
+}
+label svg.moon{
+    left:60px;
+    fill: #7e7e7e;
+    transition: 0.3s;
+}
+input:checked + label svg.sun{
+    fill: #7e7e7e;
+
+}
+input:checked + label svg.moon{
+    fill: #fff;
+
+}
+
+  

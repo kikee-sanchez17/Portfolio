@@ -1,0 +1,103 @@
+.parent {
+    margin-top: 8%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+  }
+  
+  .info {
+    font-size: 1.4em;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+  }
+  
+  h2,
+  p {
+    color: var(--text-color2);
+  }
+  
+  .image {
+    width: 120%;
+    height: 120%;
+    display: flex;
+    justify-content: center;
+    position: relative; /* Para posicionar la forma detrás de la imagen */
+  }
+  /*
+  .background-shape {
+    background-image: var(--form-bg-home);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 750px; 
+    height: auto;
+    z-index: 0; 
+    transform: translate(14%, -19%); 
+    opacity: 0.8;
+  }
+*/
+.background-shape {
+    position: absolute;
+    width: clamp(200px, 50vw, 800px); /* Adaptativo */
+    height: clamp(200px, 50vw, 800px);
+    background-image: var(--form-bg-home);
+    background-size: cover;
+    background-position: center;
+    transform: translate(10%, -18%);
+    z-index: 0;
+  }
+  
+  
+  
+  .profile-image {
+    width: 50%;
+    height: auto;
+    position: relative;
+    z-index: 1; /* La imagen principal queda encima de la forma */
+  }
+  
+  button {
+    font-size: 1.6rem;
+    width: 50%;
+    height: auto;
+    padding: 1.5% 0;
+    margin-top: 5%;
+  }
+  
+  .introduction {
+    margin-top: 10%;
+    justify-content: center;
+  }
+  
+  .infoandimage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7%;
+    align-items: center;
+    margin-top: 5%;
+  }
+  
+  .info2 {
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+  }
+  
+  .info2 p {
+    color: var(--text-color);
+    font-size: 1.5rem;
+  }
+  
+  .image2 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image2 img {
+    width: 60%;
+    height: 50%;
+    align-items: center;
+  }
+  

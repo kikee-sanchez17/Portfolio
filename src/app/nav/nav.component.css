@@ -1,0 +1,88 @@
+body{
+    box-sizing: border-box;
+   
+
+}
+.parent {
+    display: flex; /* Activa Flexbox para organizar en una fila */
+    align-items: center; /* Alinear verticalmente los elementos hijos */
+    justify-content: flex-end; /* Todo alineado hacia la derecha */
+    padding: 40px 70px 15px 10px;
+    gap: 20px; /* Espaciado entre los ítems del contenedor */
+    flex-wrap: wrap; /* Permite que los elementos se muevan a otra línea */
+    background-color: var(--bg-color);
+
+
+}
+.parent.scrolled {
+    background-color: var(--bg-color-scrolled); /* Fondo semitransparente */
+    backdrop-filter: blur(10px); /* Efecto blur */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega sombra para destacar */
+  }
+
+/* Estilo del menú */
+.menu {
+    list-style: none; /* Quitar viñetas */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Alinear los ítems horizontalmente */
+    gap: 40px; /* Espaciado entre los ítems del menú */
+    
+}
+
+/* Elementos del menú */
+.menu-item {
+    font-family: 'SF Mono', monospace; /* Tipografía */
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.9em;
+    position: relative; /* Necesario para usar el pseudo-elemento */
+    display: inline-block; /* Garantiza que el desplazamiento funcione */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+/* Pseudo-elemento para la línea */
+.menu-item::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Línea justo debajo del texto */
+    left: 0;
+    width: 0; /* Ancho inicial de la línea (invisible) */
+    height: 2px;
+    background-color: var(--hover-color); /* Color de la línea */
+    transition: width 0.3s ease; /* Transición suave para la línea */
+    
+}
+
+/* Efecto de hover */
+.menu-item:hover {
+    transform: translateY(-5px); /* Mueve el texto hacia arriba */
+    color: var(--hover-color); /* Cambia el color del texto */
+}
+
+.menu-item:hover::after {
+    width: 100%; /* Línea completa al hacer hover */
+}
+
+/* Botones de modo de tema */
+.togglebutton {
+    display: flex; /* Asegura que los botones estén en fila */
+    gap: 10px; /* Espaciado entre los botones */
+}
+
+/* Imágenes */
+.images {
+    margin-left: 90px;
+    margin-right: auto;
+    display: flex;
+    gap: 30px;
+}
+
+/* Lista del menú */
+.short ul {
+    display: flex; /* Alinear los elementos del menú horizontalmente */
+    list-style: none; /* Quitar viñetas */
+    gap: 40px; /* Espaciado entre los elementos del menú */
+    margin-right: 20px;
+}
+
