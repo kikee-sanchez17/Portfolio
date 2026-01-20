@@ -2,7 +2,7 @@
 .mobile-nav {
   background-color: var(--bg-color);
   padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
   position: relative;
   z-index: 10;
 }
@@ -12,13 +12,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 56px; /* mejor área táctil */
 }
 
 /* Example logo text styling */
 .logo-text {
   font-family: 'SF Mono', monospace;
-  font-size: 1.5em;
+  font-size: 1.25em;
   color: var(--text-color);
+}
+
+/* Profile image */
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
 }
 
 /* Hamburger Button */
@@ -27,47 +37,97 @@
   border: none;
   cursor: pointer;
   outline: none;
+  padding: 10px; /* hit area */
+  border-radius: 10px;
 }
 
+/* Accesibilidad: foco visible */
+.menu-toggle:focus-visible {
+  outline: 2px solid var(--hover-color);
+  outline-offset: 2px;
+}
+
+/* Hamburger icon */
 .hamburger-icon {
   display: block;
-  width: 25px;
+  width: 26px;
   height: 3px;
   background-color: var(--text-color);
   position: relative;
-  transition: background 0.3s ease;
+  border-radius: 999px;
+  transition: background 0.25s ease;
 }
 
-/* Hamburger icon “lines” */
+/* Hamburger icon lines */
 .hamburger-icon::before,
 .hamburger-icon::after {
   content: '';
   position: absolute;
-  width: 25px;
+  width: 26px;
   height: 3px;
   background-color: var(--text-color);
   left: 0;
-  transition: transform 0.3s ease;
+  border-radius: 999px;
+  transition: transform 0.25s ease, top 0.25s ease, opacity 0.2s ease;
 }
+
 .hamburger-icon::before {
   top: -8px;
 }
+
 .hamburger-icon::after {
   top: 8px;
 }
 
-/* Navigation Menu */
+/* Si tu botón está dentro de .nav-header y el menú se abre,
+   puedes animar el icono a "X" usando la misma clase .open del menú.
+   (Sin tocar TS: depende de que .nav-menu.open exista en el DOM) */
+.nav-menu.open ~ .nav-header .hamburger-icon,
+.nav-header:has(+ .nav-menu.open) .hamburger-icon {
+  background: transparent;
+}
+
+.nav-header:has(+ .nav-menu.open) .hamburger-icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.nav-header:has(+ .nav-menu.open) .hamburger-icon::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* Navigation Menu (animado) */
 .nav-menu {
-  display: none;
+  /* No usar display:none si quieres animación */
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  margin-top: 15px;
+  gap: 18px;
+
+  margin-top: 10px;
+
+  /* Animación */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+
+  transition:
+    max-height 0.35s ease,
+    opacity 0.25s ease,
+    transform 0.35s ease;
+
+  pointer-events: none;
+  will-change: transform, opacity;
 }
 
 /* Open menu */
 .nav-menu.open {
-  display: flex;
+  max-height: 520px; /* suficientemente grande para tu contenido */
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 /* Menu List */
@@ -78,6 +138,7 @@
   width: 100%;
 }
 
+/* Un poco de separación visual */
 .menu li {
   width: 100%;
   text-align: center;
@@ -86,42 +147,83 @@
 .menu li a {
   display: block;
   width: 100%;
-  padding: 10px 0;
+  padding: 12px 0;
   font-family: 'SF Mono', monospace;
-  font-size: 1.5em;
+  font-size: 1.25em; /* 1.5em suele ser demasiado grande en móvil */
   text-decoration: none;
   color: var(--text-color);
-  transition: color 0.3s ease, transform 0.3s ease;
+
+  border-radius: 12px;
+  transition: color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
 }
 
+/* Hover/active más "mobile friendly" */
 .menu li a:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   color: var(--hover-color);
 }
 
-/* Social Icons and Dark Mode Button Container */
+.menu li a:active {
+  transform: translateY(0);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Accesibilidad: foco visible en links */
+.menu li a:focus-visible {
+  outline: 2px solid var(--hover-color);
+  outline-offset: 2px;
+}
+
+/* Social Icons and container */
 .social-and-toggle {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 14px;
+  padding-bottom: 10px;
 }
 
 /* Social Icons styling */
 .social-icons {
   display: flex;
-  gap: 15px;
+  gap: 16px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px; /* hit area */
+  border-radius: 12px;
+}
+
+.social-icons a:focus-visible {
+  outline: 2px solid var(--hover-color);
+  outline-offset: 2px;
 }
 
 .social-icons a svg {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   fill: var(--text-color);
-  transition: fill 0.3s ease;
+  transition: fill 0.2s ease;
 }
 
 .social-icons a:hover svg {
   fill: var(--hover-color);
+}
+
+/* Respeto a usuarios con reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .nav-menu,
+  .hamburger-icon,
+  .hamburger-icon::before,
+  .hamburger-icon::after,
+  .menu li a,
+  .social-icons a svg {
+    transition: none !important;
+    animation: none !important;
+  }
 }
 
 /* Optional: Hide mobile nav on larger screens */

@@ -57,4 +57,14 @@ ul {
     background: linear-gradient(45deg, #d16d4a, #f9dd94);
 
   }
+
+  @media only screen and (max-width: 600px) {
+
+  button {
+    height: 3rem;
+    width: 100%;
+    padding: 1.5% 0;
+    margin-top: 1%;
+  }
+}
       
