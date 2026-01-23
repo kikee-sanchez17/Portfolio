@@ -57,7 +57,7 @@ button:focus{
 .description p{
     color: var(--text-color);
     font-family: 'SF Mono', monospace;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     
 }
 .technologies{
@@ -84,6 +84,7 @@ button:hover{
 
 .learning{
     display: none; 
+    margin-bottom: 10%;
 }
 
 .learning h1{
@@ -101,4 +102,80 @@ button:hover{
     color: var(--text-color);
     font-family: 'SF Mono', monospace;
     font-size: 1.1rem;
+}
+
+.media {
+  display: grid;
+  gap: 20px;
+  margin: 24px 0;
+}
+
+.preview {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery {
+  display: grid;
+  gap: 12px;
+}
+
+.gallery .thumb {
+  border: 1px solid rgba(255,255,255,0.10);
+  background: transparent;
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery .thumb img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  display: block;
+}
+
+.thumb--active {
+  border-color: rgba(255,255,255,0.30);
+}
+
+.video__frame {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.video__frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+@media (min-width: 900px) {
+  .media {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .gallery {
+    grid-template-columns: 140px 1fr;
+    align-items: start;
+  }
+
+  .gallery .thumb img {
+    height: 70px;
+  }
 }

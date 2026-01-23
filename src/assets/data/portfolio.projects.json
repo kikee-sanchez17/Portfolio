@@ -14,7 +14,11 @@
     }
 
   ],
-  "imageURL": "http://localhost:8081/Images/chill4.png",
+  "imagesURL": [
+    "assets/projects/portfolio/1.png",
+    "assets/projects/portfolio/2.png",
+    "assets/projects/portfolio/3.png"
+  ],
   "_class": "com.PortafolioBackend.PortafolioBackend.Model.Project",
   "repositoryURL": "https://github.com/kikee-sanchez17",
   "docURL": "",
@@ -22,25 +26,34 @@
 },
 {
   "_id": 3,
-  "project_title": "BuscaMines",
-  "short_description": "An Android game adaptation of the classic Minesweeper, featuring multiple difficulty levels and a leaderboard to compete with other players.",
-  "description": "Test description3",
+  "project_title": "BuscaMinEs",
+  "short_description": "Native Android game inspired by the classic Minesweeper, featuring multiple difficulty levels, real-time leaderboard, and Firebase-based user management.",
+  "description": "BuscaMinEs is a native Android application that recreates the classic Minesweeper game while extending its functionality with modern mobile features. The app includes multiple difficulty levels, persistent game state, and an online leaderboard that allows users to compete and compare scores. The project focuses on clean architecture, responsive UI design, and the integration of cloud services for authentication and data storage.",
   "technologies": [
     {
       "name": "Kotlin",
-      "info": "I learned to develop native Android applications, focusing on UI design, data persistence, and asynchronous programming."
+      "info": "Used as the primary programming language to develop a native Android application. This project demonstrates the use of Kotlin for UI interaction, game logic implementation, state management, and asynchronous operations following Android best practices."
+    },
+    {
+      "name": "Android SDK",
+      "info": "The Android SDK was used to build the application structure, manage activities and layouts, handle user input, and ensure compatibility across different Android devices and screen sizes."
     },
     {
       "name": "Firebase",
-      "info": "I used Firebase for real-time databases, user authentication, and cloud-hosted data synchronization in mobile apps."
+      "info": "Firebase was integrated to provide user authentication, real-time database functionality, and cloud-based data synchronization. It enables features such as online leaderboards and persistent user data across sessions."
     }
   ],
-  "imageURL": "http://localhost:8081/Images/chill3.png",
-  "_class": "com.PortafolioBackend.PortafolioBackend.Model.Project",
+  "imagesURL": [
+    "/assets/images/projects/buscamines/1.png",
+    "/assets/images/projects/buscamines/2.png",
+    "/assets/images/projects/buscamines/3.png",
+    "/assets/images/projects/buscamines/4.png"
+  ],
   "repositoryURL": "https://github.com/kikee-sanchez17/BuscaMinEs",
   "docURL": "",
-  "videoURL": "https://youtu.be/5hhmqVQTUxI"
-},
+  "videoURL": "https://www.youtube.com/watch?v=5hhmqVQTUxI"
+}
+,
 {
   "_id": 6,
   "project_title": "MuseMe",
@@ -56,7 +69,11 @@
       "info": "I designed relational schemas, wrote complex SQL queries, and ensured data integrity with foreign keys and constraints."
     }
   ],
-  "imageURL": "http://localhost:8081/Images/chill6.png",
+  "imagesURL": [
+    "assets/projects/museme/1.png",
+    "assets/projects/museme/2.png",
+    "assets/projects/museme/3.png"
+  ],
   "_class": "com.PortafolioBackend.PortafolioBackend.Model.Project",
   "repositoryURL": "https://github.com/miriammuraaa/MuseMe",
   "docURL": "https://www.canva.com/design/DAF65h5n3xk/4K73T3FeI24M0djvLEituQ/view?utm_content=DAF65h5n3xk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h37c5bd3d94",
@@ -78,7 +95,12 @@
     }
   ],
   "_class": "com.PortafolioBackend.PortafolioBackend.Model.Project",
-  "imageURL": "http://localhost:8081/Images/chill2.png",
+  "images": [
+  "/assets/projects/buscamines/1.png",
+  "./assets/projects/buscamines/2.png",
+  "/assets/projects/buscamines/3.png",
+  "./assets/projects/buscamines/4.png"
+],
   "repositoryURL": "https://github.com/kikee-sanchez17/stock-laboratori",
   "docURL": "",
   "videoURL": ""
@@ -94,7 +116,6 @@
       "name": "Python"
     }
   ],
-  "imageURL": "http://localhost:8081/Images/chill5.png",
   "_class": "com.PortafolioBackend.PortafolioBackend.Model.Project",
   "repositoryURL": "https://github.com/kikee-sanchez17/Portfolio",
   "docURL": "",
@@ -115,7 +136,11 @@
       "info": "I gained experience with version control, working collaboratively using branches, merges, and managing code history through GitHub."
     }
   ],
-  "imageURL": "http://localhost:8081/Images/chill1.png",
+  "imagesURL": [
+    "assets/projects/zumzeig/1.png",
+    "assets/projects/zumzeig/2.png",
+    "assets/projects/zumzeig/3.png"
+  ],
   "_class": "com.PortafolioBackend.PortafolioBackend.Model.Project",
   "repositoryURL": "https://github.com/kikee-sanchez17/ZumZeig",
   "docURL": "https://docs.google.com/document/d/1UNc7BvZBrvZEYUI6UR0ENz_8mZdXWzkmHyGvwlXB_wI/edit?usp=drive_link",

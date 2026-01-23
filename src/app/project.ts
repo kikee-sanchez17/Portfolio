@@ -11,7 +11,7 @@ export interface Project {
     short_description : string;
     description : string;
     technologies : Technology [];
-    imageURL : string;
+    imagesURL : string[];
     repositoryURL : string;
     docURL : string;
     videoURL : string;
