@@ -1,1 +1,107 @@
-<p>contact works!</p>
+<!-- contact.component.html -->
+<section class="contact">
+    <header class="contact__header">
+        <h2 class="contact__title">Contact Me</h2>
+        <p class="contact__subtitle">
+            Do you have a proposal, feedback, or an idea? Send me a message and I will respond as soon as possible. </p>
+    </header>
+
+    <div class="contact__grid">
+        <!-- Left: Info -->
+        <aside class="card card--info" aria-label="Información de contacto">
+            <h2 class="card__title">Info</h2>
+
+            <div class="info-list">
+                <div class="info-item">
+                    <span class="info-item__label">Email</span>
+                    <a class="info-item__value" [href]="'mailto:' + contact.email">{{ contact.email }}</a>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-item__label">Location</span>
+                    <span class="info-item__value">{{ contact.location }}</span>
+                </div>
+            </div>
+
+            <div class="divider" role="separator" aria-hidden="true"></div>
+
+            <h3 class="card__subtitle">Links</h3>
+            <nav class="links" aria-label="Enlaces externos">
+                <a class="link" [href]="contact.linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="link" [href]="contact.github" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="link" [href]="'mailto:' + contact.email">Email</a>
+            </nav>
+
+            <p class="hint">
+                If you prefer, you can also contact me directly via LinkedIn.
+            </p>
+        </aside>
+
+        <!-- Right: Form -->
+        <div class="card card--form">
+            <h2 class="card__title">Send me a message</h2>
+
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+                <div class="form__row">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input id="name" type="text" formControlName="name" autocomplete="name" />
+                        <small class="error" *ngIf="f.name.touched && f.name.invalid">
+                            Please enter a valid name (2–60 characters).
+                        </small>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" formControlName="email" autocomplete="email" />
+                        <small class="error" *ngIf="f.email.touched && f.email.invalid">
+                            Please enter a valid email address.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="subject">Subject</label>
+                    <input id="subject" type="text" formControlName="subject" autocomplete="off" />
+                    <small class="error" *ngIf="f.subject.touched && f.subject.invalid">
+                        The subject must have 3–120 characters.
+                    </small>
+                </div>
+
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="6" formControlName="message"></textarea>
+                    <div class="meta">
+                        <small class="error" *ngIf="f.message.touched && f.message.invalid">
+                            The message must have 10–1200 characters.
+                        </small>
+                        <small class="counter">
+                            {{ (form.value.message?.length || 0) }}/1200
+                        </small>
+                    </div>
+                </div>
+
+                <div class="field field--checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox" formControlName="consent" />
+                        <span>I accept that you use these data only to respond to my message.</span>
+                    </label>
+                    <small class="error" *ngIf="f.consent.touched && f.consent.invalid">
+                        You must accept the consent to submit the form.
+                    </small>
+                </div>
+
+                <div class="actions">
+                    <button class="btn" type="submit" [disabled]="status === 'loading'">
+                        <span *ngIf="status !== 'loading'">Send</span>
+                        <span *ngIf="status === 'loading'">Sending…</span>
+                    </button>
+
+                    <p class="status" *ngIf="status !== 'idle'" [attr.data-status]="status">
+                        {{ statusMessage }}
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

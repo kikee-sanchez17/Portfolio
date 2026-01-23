@@ -18,7 +18,7 @@
     row-gap: 4vw;
     column-gap: 7vw;
     grid-template-columns: repeat(auto-fit, minmax(350px, 0.4fr));
-    grid-auto-rows: 250px; /* Define la altura dinámica de cada fila */
+    grid-auto-rows: 250px; 
     justify-content: center;
     
 }
@@ -26,6 +26,7 @@
 
     background-color: var(--bg-nav-color);
     padding:25px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
 
     
 }

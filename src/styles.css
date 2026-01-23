@@ -54,10 +54,11 @@
   }
   span{
     font-family: 'SF Mono', monospace;
-    color: var(--hover-color);
     transition: color 0.3s ease;
   }
-
+h3{
+    font-family: 'SF Mono', monospace;
+}
 a,button {
     font-family: 'SF Mono', monospace;
 
