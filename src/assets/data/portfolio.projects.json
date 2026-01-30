@@ -1,8 +1,8 @@
 [{
-  "_id": 4,
+  "_id": 1,
   "project_title": "Portfolio",
   "short_description": "My personal space to showcase my projects, highlight my full-stack skills, and share a bit about myself.",
-  "description": "Test description4",
+  "description": "This project is a personal portfolio website built with Angular and TypeScript. It serves as a showcase of my skills, projects, and professional background.",
   "technologies": [
     {
       "name": "Angular",
@@ -14,18 +14,13 @@
     }
 
   ],
-  "imagesURL": [
-    "assets/projects/portfolio/1.png",
-    "assets/projects/portfolio/2.png",
-    "assets/projects/portfolio/3.png"
-  ],
   "_class": "com.PortafolioBackend.PortafolioBackend.Model.Project",
   "repositoryURL": "https://github.com/kikee-sanchez17",
   "docURL": "",
   "videoURL": ""
 },
 {
-  "_id": 3,
+  "_id": 2,
   "project_title": "BuscaMinEs",
   "short_description": "Native Android game inspired by the classic Minesweeper, featuring multiple difficulty levels, real-time leaderboard, and Firebase-based user management.",
   "description": "BuscaMinEs is a native Android application that recreates the classic Minesweeper game while extending its functionality with modern mobile features. The app includes multiple difficulty levels, persistent game state, and an online leaderboard that allows users to compete and compare scores. The project focuses on clean architecture, responsive UI design, and the integration of cloud services for authentication and data storage.",
@@ -55,74 +50,7 @@
 }
 ,
 {
-  "_id": 6,
-  "project_title": "MuseMe",
-  "short_description": "A mobile app designed for music lovers, allowing you to browse and purchase your favorite vinyl records.",
-  "description": "Test description6",
-  "technologies": [
-    {
-      "name": "Java",
-      "info": "I developed object-oriented applications, understanding core principles like inheritance, polymorphism, and modular architecture."
-    },
-    {
-      "name": "MySQL",
-      "info": "I designed relational schemas, wrote complex SQL queries, and ensured data integrity with foreign keys and constraints."
-    }
-  ],
-  "imagesURL": [
-    "assets/projects/museme/1.png",
-    "assets/projects/museme/2.png",
-    "assets/projects/museme/3.png"
-  ],
-  "_class": "com.PortafolioBackend.PortafolioBackend.Model.Project",
-  "repositoryURL": "https://github.com/miriammuraaa/MuseMe",
-  "docURL": "https://www.canva.com/design/DAF65h5n3xk/4K73T3FeI24M0djvLEituQ/view?utm_content=DAF65h5n3xk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h37c5bd3d94",
-  "videoURL": ""
-},
-{
-  "_id": 2,
-  "project_title": "Lab-Stock",
-  "short_description": "This Lab-Stock web app streamlines the management of laboratory inventory for my former high school, ensuring efficient tracking and organization of supplies.",
-  "description": "Test description2",
-  "technologies": [
-    {
-      "name": "Laravel",
-      "info": "I learned to create structured, scalable web applications using MVC architecture and integrate relational databases with Eloquent ORM."
-    },
-    {
-      "name": "PHP",
-      "info": "I developed server-side logic, handled form submissions, connected to databases, and implemented user authentication systems."
-    }
-  ],
-  "_class": "com.PortafolioBackend.PortafolioBackend.Model.Project",
-  "images": [
-  "/assets/projects/buscamines/1.png",
-  "./assets/projects/buscamines/2.png",
-  "/assets/projects/buscamines/3.png",
-  "./assets/projects/buscamines/4.png"
-],
-  "repositoryURL": "https://github.com/kikee-sanchez17/stock-laboratori",
-  "docURL": "",
-  "videoURL": ""
-},
-{
-  "_id": 5,
-  "project_title": "KMusic Bot",
-  "short_description": "This Telegram bot lets you read song lyrics and download your favorite music effortlessly.",
-  "description": "Test description5",
-  "technologies": [
-    {
-      "info": "I created automation scripts and bots, handled APIs, and built basic CLI tools with an emphasis on simplicity and readability.",
-      "name": "Python"
-    }
-  ],
-  "_class": "com.PortafolioBackend.PortafolioBackend.Model.Project",
-  "repositoryURL": "https://github.com/kikee-sanchez17/Portfolio",
-  "docURL": "",
-  "videoURL": "https://www.youtube.com/watch?v=6myp4rPLd38"
-},
-{
-  "_id": 1,
+  "_id": 3,
   "project_title": "Zumzeig",
   "short_description": "Zumzeig is an Android app designed for a local cinema in Barcelona, enhancing the movie-going experience with seamless access to schedules and information.",
   "description": "This application was my final project for my higher degree. My classmate and I wanted to support and promote local cinema, recognizing its cultural significance beyond the dominance of large film industries. To achieve this, we collaborated with a local cinema in Barcelona and developed a fully customized Android application tailored to their needs.\n\nThe app was built using Android Studio with Kotlin as the primary programming language, and it integrates a MySQL relational database to store and manage user information efficiently. One of the main goals was to enhance user engagement by allowing them to create personalized profiles, where they can save their favorite events, delete events, update personal information, and change their passwords.\n\nAdditionally, the app provides essential features for cinema-goers, such as checking movie schedules and exploring the history of the cinema, giving users deeper insight into the venue’s background and its cultural impact.\n\nTo improve security and user experience, I implemented OTP-based password recovery using PHPmailer, ensuring that users can securely reset their passwords if needed. The overall design and functionality of the app were carefully crafted to provide a smooth and intuitive experience, making it easier for the cinema’s audience to stay connected and engaged with their favorite local film screenings.",
@@ -136,13 +64,33 @@
       "info": "I gained experience with version control, working collaboratively using branches, merges, and managing code history through GitHub."
     }
   ],
-  "imagesURL": [
-    "assets/projects/zumzeig/1.png",
-    "assets/projects/zumzeig/2.png",
-    "assets/projects/zumzeig/3.png"
-  ],
   "_class": "com.PortafolioBackend.PortafolioBackend.Model.Project",
   "repositoryURL": "https://github.com/kikee-sanchez17/ZumZeig",
   "docURL": "https://docs.google.com/document/d/1UNc7BvZBrvZEYUI6UR0ENz_8mZdXWzkmHyGvwlXB_wI/edit?usp=drive_link",
   "videoURL": ""
-}]
+},
+{
+  "_id": 4,
+  "project_title": "Timely",
+  "short_description": "This website bot lets you book appointments with ease.",
+  "description": "This project was developed to automate appointment booking for a local business. It integrates with a web interface and uses Spring Boot for backend services. The app handles user authentication, appointment scheduling, and notifications, streamlining the booking process and improving customer experience.",
+  "technologies": [
+    {
+      "info": "API",
+      "name": "Spring Boot"
+    },
+    {
+      "info": "Database Management",
+      "name": "MySQL"
+    },
+    {
+      "info": "Frontend Development",
+      "name": "Angular"
+    }
+  ],
+  "_class": "com.PortafolioBackend.PortafolioBackend.Model.Project",
+  "repositoryURL": "https://github.com/kikee-sanchez17/Timely",
+  "docURL": "",
+  "videoURL": ""
+}
+]

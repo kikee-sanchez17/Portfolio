@@ -9,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+downloadFile() {
+  const url = 'assets/CV-EnricSanchezMontoya-2026.pdf';
+
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'CV-EnricSanchezMontoya-2026.pdf'; // nombre que tendrá al guardarse
+  a.click();
+}
 }
